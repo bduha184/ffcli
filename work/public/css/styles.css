@@ -1,0 +1,85 @@
+body {
+  font-family: Arial,sans-serif;
+}
+
+main {
+  width: 320px;
+  margin: 32px auto;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  margin:0 0 16px;
+}
+input[type="text"]{
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+  margin: 0 0 16px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+input[type="checkbox"]{
+  margin-right: 8px;
+}
+
+.purge {
+  color: red;
+  cursor: pointer;
+}
+
+.btn-wrapper{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.btn-wrapper span{
+  display: block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+.form-delete{
+  background: rgb(242, 47, 47);
+  margin-left: 0.5rem;
+  border-radius: 5px;
+}
+
+.edit
+{
+  background: rgb(44, 102, 237);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  margin:0 auto;
+}
+.edit-form {
+  display: none;
+}
