@@ -2,11 +2,13 @@
 
 require_once(__DIR__ . '/../app/Human.php');
 require_once(__DIR__ . '/../app/Enemy.php');
+require_once(__DIR__ . '/../app/Brave.php');
 
 echo "処理のはじまりはじまり～！\n\n";
 
 $tiida = new Human();
 $goblin = new Enemy();
+$brave = new Brave();
 
 $tiida->name = "ティーダ";
 $goblin->name = "ゴブリン";
