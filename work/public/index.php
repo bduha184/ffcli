@@ -1,5 +1,5 @@
 <?php
-
+require_once(__DIR__ . '/../app/Lives.php');
 require_once(__DIR__ . '/../app/Human.php');
 require_once(__DIR__ . '/../app/Enemy.php');
 require_once(__DIR__ . '/../app/Brave.php');

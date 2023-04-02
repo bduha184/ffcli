@@ -13,12 +13,9 @@ class Brave extends Human{
 
     public function doAttack($enemies)
     {
-        if($this->getHitPoint()<=0){
-            return false;
-        }
+        if(!$this->isEnableAttack($enemies)) return false;
 
-        $enemyIndex = rand(0, count($enemies) - 1);
-        $enemy = $enemies[$enemyIndex];
+        $enemy = $this->selectTarget($enemies);
 
         if (rand(1, 3) === 1) {
             echo "『" .$this->getName() . "』のスキルが発動した！\n";
