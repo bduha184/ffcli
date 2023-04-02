@@ -1,11 +1,11 @@
 <?php
-require_once(__DIR__ . '/../app/Lives.php');
-require_once(__DIR__ . '/../app/Human.php');
-require_once(__DIR__ . '/../app/Enemy.php');
-require_once(__DIR__ . '/../app/Brave.php');
-require_once(__DIR__ . '/../app/BlackMage.php');
-require_once(__DIR__ . '/../app/WhiteMage.php');
-require_once(__DIR__ . '/../app/Message.php');
+require_once(__DIR__ . '/../Lib/Loader.php');
+require_once(__DIR__ . '/../Lib/Utility.php');
+
+$loader = new Loader();
+
+$loader->regDirectory(__DIR__.'/../app');
+$loader->register();
 
 echo "処理のはじまりはじまり～！\n\n";
 
@@ -25,20 +25,6 @@ $isFinishFlg = false;
 
 $messageObj = new Message;
 
-function isFinish($objects){
-
-    $deathCnt = 0;
-
-    foreach ($objects as $object) {
-        if ($object->getHitPoint() > 0) {
-            return false;
-        }
-        $deathCnt++;
-    }
-    if ($deathCnt === count($objects)) {
-        return true;
-    }
-}
 
 while (!$isFinishFlg) {
     echo "*** $turn ターン目 ***\n\n";
