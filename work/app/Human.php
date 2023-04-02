@@ -41,4 +41,14 @@ class Human {
         if($this->hitPoint < 0)$this->hitPoint = 0;
     }
 
+
+    public function recoveryDamage($heal,$target){
+
+        $this->hitPoint += $heal;
+
+        if($this->hitPoint > $target::MAX_HITPOINT){
+            $this->hitPoint = $target::MAX_HITPOINT;
+        }
+    }
+
 }
