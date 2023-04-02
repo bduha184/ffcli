@@ -5,19 +5,20 @@ require_once(__DIR__ . '/../Lib/Utility.php');
 $loader = new Loader();
 
 $loader->regDirectory(__DIR__.'/../app');
+$loader->regDirectory(__DIR__.'/../app/constans');
 $loader->register();
 
 echo "処理のはじまりはじまり～！\n\n";
 
 $members = [];
-$members[] = new Brave('ティーダ');
-$members[] = new BlackMage('ユウナ');
-$members[] = new WhiteMage('ルールー');
+$members[] = Brave::getInstance(CharacterName::TIIDA);
+$members[] = new BlackMage(CharacterName::YUNA);
+$members[] = new WhiteMage(CharacterName::RULU);
 
 $enemies = [];
-$enemies[] = new Enemy('ゴブリン', '20');
-$enemies[] = new Enemy('ボム', '25');
-$enemies[] = new Enemy('モルボル', '30');
+$enemies[] = new Enemy(EnemyName::GOBLINS,20);
+$enemies[] = new Enemy(EnemyName::BOMB, '25');
+$enemies[] = new Enemy(EnemyName::MORBOL,'30');
 
 $turn = 1;
 
